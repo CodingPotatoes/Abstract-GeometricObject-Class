@@ -1,0 +1,26 @@
+public class TestGeometricObject {
+    
+    public static void main(String[] args){
+
+        GeometricObject geoObject1 = new GeometricObject(5);
+        GeometricObject geoObject2 = new GeometricObject(5, 3);
+
+        System.out.prinln("The two Objects have equal area? " + equalArea(geoObject1.getArea, geoObject2.getArea));
+
+        displayGeometricObject(geoObject1);
+        displayGeometricObject(geoObject2);
+
+        
+    }
+
+    public static boolean equalArea(GeometricObject object1, GeometricObject object2){
+
+        return object1.getArea() == object2.getArea(0);
+    }
+
+    public static void displayGeometricObject (GeometricObject object){
+        System.out.prinln();
+        System.out.prinln("The area is " + object.getArea());
+        System.out.prinln("The perimeter is " + object.getPerimeter());
+    }
+}
